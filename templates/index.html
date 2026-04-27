@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boletim Escolar</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="/">Boletim</a>
+    <a href="/tarefas">Tarefas</a>
+    <a href="/mensagens">Mensagens</a>
+</nav>
+
+<h1>Boletim - 4 Bimestres</h1>
+
+<form method="POST">
+    {% for materia, notas in dados.items() %}
+    <div class="card">
+        <h2>{{ materia }}</h2>
+
+        {% for i in range(4) %}
+        <input type="number" step="0.1" name="{{ materia }}_{{ i }}" value="{{ notas[i] }}">
+        {% endfor %}
+
+        <p>Média: {{ medias[materia] }}</p>
+    </div>
+    {% endfor %}
+
+    <button type="submit">Atualizar</button>
+</form>
+
+</body>
+</html>

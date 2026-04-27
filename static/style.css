@@ -1,0 +1,207 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+/* ================= TEMAS ================= */
+
+:root {
+    --bg: #eef1f5;
+    --card: #ffffff;
+    --text: #000;
+    --primary: #0a1f44;
+}
+
+.dark {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #fff;
+    --primary: #4dabf7;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ================= LOGIN ================= */
+
+.login-body {
+    background: linear-gradient(135deg, #0a1f44, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: var(--card);
+    padding: 40px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0a1f44, #000);
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ================= MAIN ================= */
+
+.main {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* ================= INPUTS ================= */
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.inputs input {
+    width: 48%;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* ================= MÉDIA ================= */
+
+.media {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ================= BARRA DE PROGRESSO ================= */
+
+.progress {
+    height: 8px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    width: 0%;
+    transition: 0.5s;
+}
+
+/* ================= BOTÃO ================= */
+
+.salvar {
+    margin-top: 25px;
+    padding: 14px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= TOGGLE DARK ================= */
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* ================= RESULTADO ================= */
+
+.resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 12px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
